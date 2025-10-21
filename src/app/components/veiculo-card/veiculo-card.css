@@ -1,0 +1,81 @@
+.veiculo-card-medium {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    max-width: 350px;
+    min-height: 250px;
+
+}
+
+.subtitle {
+    color: #757575;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #F5F5F5;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.full-container {
+    width: 100%;
+    position: relative;
+}
+
+.outline {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.veiculo-card-logo-background {
+    max-width: 45px;
+    max-height: 45px;
+    
+    border-radius: 8px;
+    background-color: #CFE1F8;
+}
+
+.veiculo-header {
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.veiculo-info-container {
+    padding: 0 10px;
+}
+
+.veiculo-icon {
+    background-image: url('../../../../public/car-icon.png');
+    background-size: cover;
+    border-radius: 5px;
+    max-width: 55px;
+    max-height: 55px;
+}
+
+.cobranca-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cobranca-description {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3795BD;
+}
+
+
