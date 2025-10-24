@@ -26,8 +26,8 @@ export class VeiculoCard {
 
   @Input({ required: true }) veiculo!: Veiculo;
   
-  moreInformation() {
-    console.log("teste")
+  moreInformation(veidulo: Veiculo) {
+    console.log(this.veiculo.Id);
   }
 
   totalDeCobrancas() :number {
