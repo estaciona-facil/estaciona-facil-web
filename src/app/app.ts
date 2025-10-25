@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { VeiculosGrid } from "./components/veiculos-grid/veiculos-grid";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, VeiculosGrid],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

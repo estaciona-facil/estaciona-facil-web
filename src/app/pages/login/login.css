@@ -1,0 +1,88 @@
+/* Fundo geral */
+.login-page {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #0066cc, #00b894);
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+/* Container do formulário */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 40px;
+  min-width: 350px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos e texto */
+.login-container h2 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.login-container p {
+  font-size: 14px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Campos do formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-right: 40px;
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Botão de login */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00b894;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #009f7a;
+}
+
+/* Link de cadastro */
+.link-cadastro {
+  display: block;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.link-cadastro:hover {
+  opacity: 0.8;
+}
