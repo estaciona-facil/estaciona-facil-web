@@ -1,0 +1,8 @@
+<div class="input-row">
+  <div class="input-group">
+    <label [for]="id">{{ label }}</label>
+    <input class="input-field" [id]="id" [attr.type]="type" [attr.maxlength]="maxlength ?? null"
+      [placeholder]="placeholder" [disabled]="disabled" [value]="value ?? ''" (input)="handleInput($event)"
+      (blur)="handleBlur($event)" [mask]="mask" [dropSpecialCharacters]="dropSpecialCharacters" [attr.name]="name" />
+  </div>
+</div>

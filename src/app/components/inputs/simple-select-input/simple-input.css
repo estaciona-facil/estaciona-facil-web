@@ -1,0 +1,13 @@
+.input-row{width:100%}
+.input-group{position:relative;width:100%}
+
+.input-field{
+  width:100%; padding:16px 20px; border:2px solid #E5EC6B; border-radius:10px;
+  font-size:16px; background:#fff; color:#7EC751; transition:all .3s ease; outline:none;
+}
+.input-field:focus{ border-color:#DEDEA8; box-shadow:0 0 0 3px rgba(5,179,188,.1); outline:2px solid #E5EC6B; outline-offset:2px; }
+.input-field::placeholder{ color:#7EC751; font-weight:400 }
+
+:host(.ng-valid).ng-touched .input-field { border-color:#7EC751; }
+:host(.ng-invalid).ng-touched .input-field { border-color:#dc3545; }
+.input-field:disabled{ background-color: #f0f0f0;}
