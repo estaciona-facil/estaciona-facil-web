@@ -1,22 +1,5 @@
 <div class="login-page">
-  <div class="background"></div>
-
-  <div class="login-container">
-    <h2>Bem-vindo!</h2>
-    <p>Entre com seu usuário ou e-mail</p>
-
-    <form (ngSubmit)="onLogin()">
-      <div class="form-group">
-        <simple-input label="Usuário ou E-mail" type="text" id="usuario" placeholder="Digite seu usuário ou e-mail" />
-      </div>
-
-      <div class="form-group">
-        <simple-input label="Senha" type="password" id="senha" placeholder="Digite sua senha" />
-      </div>
-
-      <button type="submit" class="btn-login">Entrar</button>
-
-      <a href="cadastro" class="link-cadastro">Não tem uma conta? Cadastre-se</a>
-    </form>
-  </div>
+  <login-form 
+    [formTitle]="'Acesse sua conta no Estacione Fácil'"
+  />
 </div>
