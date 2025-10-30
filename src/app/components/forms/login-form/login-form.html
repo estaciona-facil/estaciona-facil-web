@@ -1,0 +1,52 @@
+<form class="form" (ngSubmit)="onSubmit()">
+    <p>{{formTitle}}</p>
+    <div class="form-inputs">
+        <div class="input-container">
+            <simple-input 
+                id="email" 
+                name="email" 
+                type="email" 
+                [(ngModel)]="email"
+                placeholder="E-mail" 
+            />
+        </div>
+        <div class="input-container">
+            <simple-input 
+                id="senha" 
+                name="password" 
+                type="password" 
+                [(ngModel)]="password"
+                placeholder="Senha" 
+            />
+        </div>  
+    </div>
+    <div class="form-actions">
+        <div class="form-action-group">
+            <button class="login-btn" (click)="onSubmit()">
+                ENTRAR
+            </button>
+        </div>
+
+
+        <div class="form-action-group">
+            <label>Ou faça login com:</label>
+            <div class="external-login-list">
+                @for (item of externalLogins.logins; track item.name)
+                {
+                <div (click)="item.action()">
+                    <img class="external-login-icon"
+                        [alt]="item.name"  
+                        [src]="item.iconPath">
+                </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-action-group">
+            <label>Não possui conta?</label>
+            <button class="btn-sm" (click)="register()">
+                CRIAR
+            </button>
+        </div>
+    </div>
+</form>

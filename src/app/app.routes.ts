@@ -5,6 +5,10 @@ import { Cadastro } from './pages/cadastro/cadastro';
 
 export const routes: Routes = [
     {
+        path: '',
+        component: Login
+    },
+    {
         path: 'login',
         component: Login
     },

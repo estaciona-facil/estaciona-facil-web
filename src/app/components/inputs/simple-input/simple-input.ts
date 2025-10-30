@@ -21,7 +21,7 @@ export class SimpleInput implements ControlValueAccessor {
   @Input() label = '';
   @Input() placeholder?: string = '';
   @Input() maxlength?: number;
-  @Input() type: 'text' | 'password' | 'number' = 'text';
+  @Input() type: 'text' | 'password' | 'email' | 'number' = 'text';
   @Input() disabled = false;
   @Input() mask?: string;
 

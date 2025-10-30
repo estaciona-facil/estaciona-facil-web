@@ -1,20 +1,11 @@
-import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
-import { SimpleInput } from "../../components/inputs/simple-input/simple-input";
+import { Component } from '@angular/core';
+import { CadastroForm } from '../../components/forms/cadastro-form/cadastro-form';
 
 @Component({
   selector: 'pagina-cadastro',
-  imports: [SimpleInput],
+  imports: [CadastroForm],
   templateUrl: './cadastro.html',
   styleUrl: './cadastro.css'
 })
-export class Cadastro {
-  private router = inject(Router);
-  usuarioOuEmail: string = '';
-  senha: string = '';
-  email: string = '';
 
-  onCadastrar() {
-    console.log('Cadastro enviado');
-  }
-}
+export class Cadastro {}

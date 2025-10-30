@@ -1,0 +1,73 @@
+form {
+    display: block;
+    max-width: 90%;
+    width: 500px;
+    padding: 1.5rem 5rem;
+    place-self: center;
+
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+p, label {
+    color: #303030;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.form-inputs {
+    margin-bottom: 25px;
+}
+
+.input-container {
+    padding: 0.5rem 1rem;
+}
+
+.form-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.form-action-group {
+    flex: 1;
+    display: flex;        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(161, 206, 206, 0.6);
+    padding: 1rem 50px;
+    cursor: pointer;
+
+    color: #303030;
+    font-size: 1.4rem;
+}
+
+.btn-sm {
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+}
+
+.btn-sm {
+    font-size: 1rem;
+}
+
+.external-login-list {
+    margin-bottom: 50px;
+}
+
+.external-login-icon {
+    width: 35px;
+    object-fit: cover;
+    object-position: center;
+    
+}
