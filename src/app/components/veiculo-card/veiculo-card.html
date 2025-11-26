@@ -22,7 +22,7 @@
     <mat-card-content style="margin-bottom: 20px;">
         <section class="outline column">
             <b class="cobranca-title">Tempo Estacionado</b>
-            <label class="cobranca-description">Entrada: {{registro.dataEntrada | date: "hh:mm"}}, </label>
+            <label class="cobranca-description">Entrada: {{registro.dataEntrada | date: "HH:mm" : 'pt-BR'}}, </label>
             <label class="cobranca-description">Tempo: {{tempoEstacionadoFormatado()}}</label>
         </section>
     </mat-card-content>
