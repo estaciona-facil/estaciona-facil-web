@@ -5,7 +5,7 @@ import { Veiculo } from '../../models/veiculos.model';
 
 @Component({
   selector: 'app-veiculos-grid',
-  imports: [MatGridListModule, VeiculoCard],
+  imports: [MatGridListModule],
   templateUrl: './veiculos-grid.html',
   styleUrl: './veiculos-grid.css'
 })

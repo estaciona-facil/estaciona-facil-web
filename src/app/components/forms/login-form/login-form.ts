@@ -51,7 +51,7 @@ export class LoginForm {
 
     onSubmit()
     {
-      this.router.navigate(['/proprietario/dashboard'])
+      this.router.navigate(['/veiculos'])
     }
 
     register()

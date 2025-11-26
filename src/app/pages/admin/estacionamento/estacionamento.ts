@@ -10,7 +10,7 @@ import { ApiService } from '../../../services/api.service';
     selector: 'app-estacionamento',
     templateUrl: './estacionamento.html',
     styleUrls: ['./estacionamento.css'],
-    imports: [CommonModule, ReactiveFormsModule, SimpleInput, FormsModule]
+    imports: [CommonModule, ReactiveFormsModule, FormsModule]
 })
 export class GerenciarEstacionamento implements OnInit {
     estacionamento!: Estacionamento;

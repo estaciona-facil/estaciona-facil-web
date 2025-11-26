@@ -4,9 +4,11 @@ import { VeiculosEstacionados } from './pages/admin/veiculos-estacionados/veicul
 import { ConsultarPlaca } from './pages/consultar-placa/consultar-placa';
 import { PaginaBaseAdmin } from './pages/admin/pagina-base-admin/pagina-base-admin';
 import { GerenciarEstacionamento } from './pages/admin/estacionamento/estacionamento';
+import { Cadastro } from './pages/cadastro/cadastro';
 
 export const routes: Routes = [
   { path: 'login', component: Login },
+  { path: 'cadastro', component: Cadastro },
   { path: 'consultar', component: ConsultarPlaca },
   {
     path: '',

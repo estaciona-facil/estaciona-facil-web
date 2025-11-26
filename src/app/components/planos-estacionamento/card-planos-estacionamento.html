@@ -2,22 +2,13 @@
   <h2 class="title">Tabela de Preços</h2>
 
   <div class="price-list">
-    @if(planos.length > 0) {
-      @for (plano of planos; track $index) {
-        <div class="price-item">
-            <div class="info">
-                <p class="time">{{ plano }}</p>
-                <p class="note">Se sair neste período</p>
-            </div>
-
-            <p class="value">R$ {{ plano.MtrValor.toFixed(2) }}</p>
-        </div>
-      }
-    }
-    @else {
       <div class="price-item">
-          <h2 class="value">Sem planos cadastradas :/</h2>
+          <div class="info">
+              <p class="time">Por Hora</p>
+          </div>
+
+          <p class="value">R$ {{ estacionamento.mtrValorHora }}</p>
       </div>
-    }
+    
   </div>
 </div>

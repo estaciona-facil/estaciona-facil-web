@@ -1,7 +1,7 @@
 import { EntidadeDominio } from "./dominio.model";
 
 export class Estacionamento extends EntidadeDominio {
-    nome?: string = "Estacionamento ParkShopping";
+    nome!: string;
     endereco!: Endereco; 
     minutosTolerancia?: string; 
     mtrValorHora!: string; 

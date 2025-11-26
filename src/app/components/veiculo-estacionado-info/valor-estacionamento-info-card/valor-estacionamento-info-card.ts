@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ApiService } from '../../../services/api.service';
 import { Estacionamento } from '../../../models/estacionamento.model';
+import { Registro } from '../../../models/registro.model';
 
 @Component({
   selector: 'valor-estacionamento-info-card',
@@ -9,7 +10,7 @@ import { Estacionamento } from '../../../models/estacionamento.model';
   imports: [],
 })
 export class ValorEstacionadoCard implements OnInit {
-  @Input() estacionamentoId!: string;
+  @Input() registro!: Registro;
   estacionamento!: Estacionamento;
   loading: boolean = false;
   mensagemErro?: string | null = null;
@@ -24,7 +25,7 @@ export class ValorEstacionadoCard implements OnInit {
   }
 
   obterEstacionamentoPorId() : void {
-    this.api.obterEstacionamentoPorId(this.estacionamentoId).subscribe({
+    this.api.obterEstacionamentoPorId(this.api.estacionamentoId).subscribe({
       next: (res : Estacionamento) => {
         this.estacionamento = res;
         this.toggleLoading();
@@ -36,6 +37,22 @@ export class ValorEstacionadoCard implements OnInit {
     });
   } 
   
+   calcularValorEstacionamento() : number {
+    return parseFloat(this.estacionamento.mtrValorHora) * this.tempoEstacionadoEmHoras();
+  }
+  
+  calcularTempoEstacionado() : number {
+    const entrada = new Date(this.registro.dataEntrada);
+    const saida = this.registro.dataSaida ? new Date(this.registro.dataSaida) : new Date();
+    return saida.getTime() - entrada.getTime();
+  }
+
+  tempoEstacionadoEmHoras(): number {
+    const ms = this.calcularTempoEstacionado();
+
+    const totalMinutos = Math.floor(ms / 60000);
+    return Math.floor(totalMinutos / 60);
+  }
     
   toggleLoading() : void {
     this.loading = !this.loading;
