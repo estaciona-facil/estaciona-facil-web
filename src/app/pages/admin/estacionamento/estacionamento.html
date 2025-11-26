@@ -1,0 +1,58 @@
+<div class="page">
+    <div class="mb-8">
+        <div class="flex items-center gap-3 mb-2">
+            <span class="material-icons text-blue-600" style="font-size: 32px;">settings</span>
+            <h2 class="text-3xl font-bold text-slate-900">Gerenciar Estacionamento</h2>
+        </div>
+        <p class="text-slate-600">Configure as informações do seu estacionamento</p>
+    </div>
+
+    <div>
+    <div class="mb-4">
+        <label>Nome</label>
+        <input type="text" [value]="estacionamento.nome" class="input-field" />
+    </div>
+
+    <fieldset class="mb-4 border p-4 rounded">
+        <legend>Endereço</legend>
+
+        <div class="mb-2">
+        <label>CEP</label>
+        <input type="text" [value]="estacionamento.endereco.cep" class="input-field" />
+        </div>
+
+        <div class="mb-2">
+        <label>Cidade</label>
+        <input type="text" [value]="estacionamento.endereco.cidade" class="input-field" />
+        </div>
+
+        <div class="mb-2">
+        <label>Bairro</label>
+        <input type="text" [value]="estacionamento.endereco.bairro" class="input-field" />
+        </div>
+
+        <div class="mb-2">
+        <label>Logradouro</label>
+        <input type="text" [value]="estacionamento.endereco.logradouro" class="input-field" />
+        </div>
+
+        <div class="mb-2">
+        <label>Número</label>
+        <input type="number" [value]="estacionamento.endereco.numero" class="input-field" />
+        </div>
+
+        <div class="mb-2">
+        <label>Complemento</label>
+        <input type="text" [value]="estacionamento.endereco.complemento" class="input-field" />
+        </div>
+    </fieldset>
+
+    <div class="mb-4">
+        <label>Tolerância (minutos)</label>
+        <input type="number" [value]="estacionamento.minutosTolerancia" class="input-field" />
+    </div>
+
+    <button type="submit" class="btn-save">Salvar</button>
+    </div>
+</div>
+

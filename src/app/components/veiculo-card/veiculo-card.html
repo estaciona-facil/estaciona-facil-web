@@ -4,8 +4,9 @@
             <div class="line">
                 <div mat-card-sm-image class="veiculo-icon"></div>
                 <div class="veiculo-info-container">
-                    <mat-card-title>{{veiculo.Marca}}</mat-card-title>
-                    <mat-card-subtitle class="subtitle">{{veiculo.Modelo}}</mat-card-subtitle>
+                    <mat-card-title>{{veiculo.placa}}</mat-card-title>
+                    <mat-card-subtitle class="subtitle">{{veiculo.modelo?.marca?.descricao ?? "Não Informado"}}</mat-card-subtitle>
+                    <mat-card-subtitle class="subtitle">{{veiculo.modelo?.descricao  ?? "Não Informado"}}</mat-card-subtitle>
                 </div>
             </div>
             <div>
@@ -17,6 +18,14 @@
             </div>
         </section>
     </mat-card-header>
+
+    <mat-card-content style="margin-bottom: 20px;">
+        <section class="outline column">
+            <b class="cobranca-title">Tempo Estacionado</b>
+            <label class="cobranca-description">Entrada: {{registro.dataEntrada | date: "hh:mm"}}, </label>
+            <label class="cobranca-description">Tempo: {{tempoEstacionadoFormatado()}}</label>
+        </section>
+    </mat-card-content>
 
     <mat-card-content>
         <section class="outline column">

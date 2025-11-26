@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="grid-2">
+    <div>
+      <p class="text-sm">Data de Entrada</p>
+      <p class="text-lg">{{ registro.dataEntrada | date:'dd/MM/yyyy HH:mm'}}</p>
+    </div>
+
+    <div>
+      <p class="text-sm">Tempo Estacionado</p>
+      <p class="text-lg">{{ tempoEstacionadoFormatado() }}</p>
+    </div>
+  </div>
+</div>

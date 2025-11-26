@@ -1,0 +1,15 @@
+<aside class="side-menu">
+  <nav class="menu-nav">
+    @for (mItem of menuItems; track $index) {
+        <a 
+            [aria-disabled]="mItem.disabled "
+            [routerLink]="mItem.href"
+            [class]="{'active': isActive(mItem.href)}"
+            class="menu-item"
+        >
+        <span class="icon">{{ mItem.icon }}</span>
+        <span class="label">{{ mItem.label }}</span>
+        </a>
+    }
+  </nav>
+</aside>

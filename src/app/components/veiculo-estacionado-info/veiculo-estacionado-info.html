@@ -1,0 +1,48 @@
+<div class="veiculo-estacionado-page">
+  <div class="space-y-6">
+    <!-- Card da placa / modelo -->
+    <div class="card border-left-blue">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div>
+          <p class="text-sm">Placa do Veículo</p>
+          <p class="text-xl text-blue font-mono">{{ registro.veiculo.placa }}</p>
+        </div>
+
+        <div style="text-align: right;">
+          <p class="text-sm">Marca</p>
+          <p class="text-lg">{{ registro.veiculo.modelo?.marca?.descricao ?? "Nao informado" }}</p>
+
+          <p class="text-sm">Modelo</p>
+          <p class="text-lg">{{ registro.veiculo.modelo?.descricao ?? "Nao informado" }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entrada / tempo estacionado -->
+    <div>
+      <tempo-estacionado-card [registro]="registro" />
+    </div>
+
+    <!-- Tarifa -->
+    <div>
+      <valor-estacionamento-info-card [estacionamentoId]="registro.estacionamentoId"/>
+    </div>
+
+    <!-- Tolerância -->
+    <div>
+      <estacionamento-info-card [estacionamentoId]="registro.estacionamentoId" />
+    </div>
+
+    <!-- Botões -->
+    <div class="space-y-3">
+      <button class="btn btn-outline" (click)="limpar()">Consultar Outro Veículo</button>
+    </div>
+  </div>
+
+  <div class="space-y-6">
+    <card-planos-estacionamento />
+    <div class="space-y-3">
+      <button class="btn btn-primary" (click)="efetuarPagamento()">Realizar Pagamento</button>
+    </div>
+  </div>
+</div>

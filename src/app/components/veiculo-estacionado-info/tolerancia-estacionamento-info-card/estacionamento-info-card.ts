@@ -1,14 +1,15 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ApiService } from '../../services/api.service';
-import { Estacionamento } from '../../models/estacionamento.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ApiService } from '../../../services/api.service';
+import { Estacionamento } from '../../../models/estacionamento.model';
 
 @Component({
-  selector: 'app-header',
+  selector: 'estacionamento-info-card',
+  templateUrl: './estacionamento-info-card.html',
+  styleUrls: ['./estacionamento-info-card.css'],
   imports: [],
-  templateUrl: './header.html',
-  styleUrl: './header.css'
 })
-export class Header implements OnInit{
+export class EstacionadoInfoCard implements OnInit {
+  @Input() estacionamentoId!: string;
   estacionamento!: Estacionamento;
   loading: boolean = false;
   mensagemErro?: string | null = null;
@@ -23,18 +24,19 @@ export class Header implements OnInit{
   }
 
   obterEstacionamentoPorId() : void {
-    this.api.obterEstacionamentoPorId(this.api.estacionamentoId).subscribe({
+    this.api.obterEstacionamentoPorId(this.estacionamentoId).subscribe({
       next: (res : Estacionamento) => {
         this.estacionamento = res;
         this.toggleLoading();
       },
       error: () => {
-        this.mensagemErro = "Estacionamento não encontrado!";
+        this.mensagemErro = "Veículo não encontrado!";
         this.toggleLoading();
       }
     });
   } 
   
+    
   toggleLoading() : void {
     this.loading = !this.loading;
   }

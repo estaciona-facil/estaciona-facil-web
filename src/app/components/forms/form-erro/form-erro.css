@@ -1,0 +1,35 @@
+.error-card {
+  padding: 1rem;
+  background: #fef2f2; /* red-50 */
+  border: 1px solid #fecaca; /* red-200 */
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.icon-container {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.error-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #dc2626; /* red-600 */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 600;
+  color: #7f1d1d; /* red-900 */
+  margin-bottom: 0.25rem;
+}
+
+.message {
+  font-size: 0.875rem;
+  color: #b91c1c; /* red-800 */
+}

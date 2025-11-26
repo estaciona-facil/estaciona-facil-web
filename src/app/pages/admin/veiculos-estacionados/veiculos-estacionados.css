@@ -1,0 +1,59 @@
+.container {
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e293b; /* slate-900 */
+}
+
+.subtitle {
+  color: #64748b; /* slate-600 */
+}
+
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: #f8fafc; /* gray-50 */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.car-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #64748b; /* slate-600 */
+}
+
+.value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b; /* slate-900 */
+}
+
+.icon {
+  font-size: 2rem;
+  color: #2563eb; /* blue-600 */
+}

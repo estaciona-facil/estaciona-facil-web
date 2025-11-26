@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="header">
+    <div class="header-title">
+      <span class="icon">🚗</span>
+      <h2>Carros Estacionados</h2>
+    </div>
+    <p class="subtitle">Listagem de veículos ativos no estacionamento</p>
+  </div>
+
+  <div class="car-list">
+    @for (registro of registros; track $index) {
+      <div>
+        <app-veiculo-card [registro]="registro"/>
+      </div>
+    }
+  </div>
+</div>
